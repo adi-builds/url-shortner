@@ -88,7 +88,7 @@ BASE_URL=http://localhost:5000
 ### 1. Clone the repository
 
 ```
-git clone https://github.com/your-username/url-shortener.git
+git clone https://github.com/adi-builds/url-shortener.git
 cd url-shortener
 ```
 
