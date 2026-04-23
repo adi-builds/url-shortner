@@ -120,6 +120,83 @@ npm run dev
 
 ---
 
+## 📡 API Documentation
+
+Base URL:
+
+```
+http://localhost:5000
+```
+
+---
+
+### 🔗 Create Short URL
+
+**Endpoint:**
+
+```
+POST /api/shorten
+```
+
+**Request Body:**
+
+```
+{
+  "originalUrl": "https://example.com"
+}
+```
+
+**Response:**
+
+```
+{
+  "shortId": "abc123",
+  "shortUrl": "http://localhost:5000/abc123"
+}
+```
+
+---
+
+### 🔁 Redirect to Original URL
+
+**Endpoint:**
+
+```
+GET /:shortId
+```
+
+**Example:**
+
+```
+GET /abc123
+```
+
+**Behavior:**
+
+* Redirects user to the original long URL
+
+---
+
+### ❌ Error Responses
+
+**Invalid URL**
+
+```
+{
+  "error": "Invalid URL"
+}
+```
+
+**Not Found**
+
+```
+{
+  "error": "Short URL not found"
+}
+```
+
+---
+
 ## 📌 Future Improvements
 
 * Add analytics (click tracking)
